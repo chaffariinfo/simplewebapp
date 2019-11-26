@@ -14,7 +14,12 @@ node{
             echo 'phase de test '
             bat 'mvn test'
         }
-        stage('phase de paqueetage') 
+		stage('test de qualite')
+		{
+			echo 'phase test de qualite'
+			bat 'mvn sonar:sonar'
+		}
+        stage('phase de packaging') 
         { 
             echo 'phase de construstion package'
             bat 'mvn package'
