@@ -32,6 +32,6 @@ node{
         stage('deploiement vers nexus') 
         { 
             echo 'phase de deploiement artefact dans le référentiel distant'
-            bat 'mvn deploy'
+            bat 'deploy:deploy-file'
         }
  }
