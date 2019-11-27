@@ -32,6 +32,6 @@ node{
         stage('deploiement vers nexus') 
         { 
             echo 'phase de deploiement artefact dans le référentiel distant'
-            bat 'mvn deploy:deploy-file -DgroupId=com.chaffari -DartifactId=app -Durl="http://127.0.0.1:8081"'
+            bat 'mvn deploy'
         }
  }
