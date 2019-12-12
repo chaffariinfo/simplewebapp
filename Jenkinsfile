@@ -24,6 +24,11 @@ node{
             echo 'phase de construstion package'
             bat 'mvn package'
         }
+	stage('phase de test de qualité')
+	{
+		echo('phase test de qualité')
+		bat 'mvn sonar:sonar'
+	}
         stage('phase installation package') 
         { 
             echo 'phase d_intallation de pachake dans votre repo local '
